@@ -8,9 +8,9 @@ VectorGraphics でモーショングラフィックスを作成するサンプ�
 環境
 ---
 
-Unity 2019.1.0f2
+Unity 2020.1.7f1
 
-VectorGraphics preview.26
+Vector Graphics Version 2.0.0-preview.13
 
 ライセンス
 ---
