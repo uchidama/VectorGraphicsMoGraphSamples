@@ -7,6 +7,8 @@ using System;
 using System.Linq;
 using System.Reflection;
 using System.Collections.Generic;
+using UnityEngine.U2D;
+
 
 [ExecuteInEditMode]
 public class ArcBuilder : MonoBehaviour
@@ -72,7 +74,7 @@ public class ArcBuilder : MonoBehaviour
 
         var color32 = Enumerable.Repeat(color, arcMeshData.vertices.Length).Select(c => (Color32)c);
         using(var nativeColors = new NativeArray<Color32>(color32.ToArray(), Allocator.Temp))
-            sprite.SetVertexAttribute<Color32>(VertexAttribute.Color, nativeColors);
+            SpriteDataAccessExtensions.SetVertexAttribute<Color32>(sprite, VertexAttribute.Color, nativeColors);
 
         return sprite;
     }
